@@ -64,7 +64,7 @@ twitter :
   #   /assets
   #
   # ASSET_PATH : https://dropways.github.io/feathericons/assets/themes/twitter
-  ASSET_PATH : http://127.0.0.1:4000/assets/themes/twitter
+  ASSET_PATH : https://dropways.github.io/feathericons/
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
