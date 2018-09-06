@@ -1,0 +1,57 @@
+<p>To test your site locally, you’ll need</p>
+
+<ul>
+  <li><a href="https://www.ruby-lang.org/en/">ruby</a></li>
+  <li>the <a href="https://github.com/github/pages-gem">github-pages</a> gem</li>
+</ul>
+
+<h3 id="installing-ruby">Installing ruby</h3>
+
+<p>There are
+<a href="https://www.ruby-lang.org/en/installation/">lots of different ways to install ruby</a>.</p>
+
+<p>In Mac OS X, older versions of ruby will already be installed.  But I
+use the <a href="https://rvm.io/">Ruby Version Manager (RVM)</a> to have a more
+recent version.  You could also use <a href="https://brew.sh/">Homebrew</a>.</p>
+
+<p>In Windows, use <a href="https://rubyinstaller.org/">RubyInstaller</a>. (In most
+of this tutorial, I’ve assumed you’re using a Mac or some flavor of
+Unix. It’s possible that none of this was usable for Windows
+folks. Sorry!)</p>
+
+<h3 id="installing-the-github-pages-gem">Installing the github-pages gem</h3>
+
+<p>Run the following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install github-pages
+</code></pre></div></div>
+
+<p>This will install the <code class="highlighter-rouge">github-pages</code> gem and all dependencies
+(including <a href="https://jekyllrb.com/">jekyll</a>).</p>
+
+<p>Later, to update the gem, type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem update github-pages
+</code></pre></div></div>
+
+<h3 id="testing-your-site-locally">Testing your site locally</h3>
+
+<p>To construct and test your site locally, go into the directory and
+type</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+</code></pre></div></div>
+
+<p>This will create (or modify) a <code class="highlighter-rouge">_site/</code> directory, containing
+everything from <code class="highlighter-rouge">assets/</code>, and then the <code class="highlighter-rouge">index.md</code> and all
+<code class="highlighter-rouge">pages/*.md</code> files, converted to html. (So there’ll be
+<code class="highlighter-rouge">_site/index.html</code> and the various <code class="highlighter-rouge">_site/pages/*.html</code>.)</p>
+
+<p>Type the following in order to “serve” the site.
+This will first run <code class="highlighter-rouge">build</code>, and so it does <em>not</em> need to be
+preceded by <code class="highlighter-rouge">jekyll build</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+</code></pre></div></div>
+
+<p>Now open your browser and go to <a href="http://localhost:4000">http://localhost:4000</a></p>
