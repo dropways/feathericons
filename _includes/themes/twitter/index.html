@@ -5,31 +5,237 @@
 	<title>{{ page.title }}</title>
 	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
 	<meta name="author" content="{{ site.author.name }}">
+	<link rel="shortcut icon" href="{{ site.baseurl }}assets/themes/twitter/images/favicon-32x32.png">
 
 	<!-- Enable responsive viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Le styles -->
-	<link href="{{ site.baseurl }}/assets/themes/twitter/bootstrap/css/bootstrap.css" rel="stylesheet">
-	<link href="{{ site.baseurl }}/assets/themes/twitter/css/feather.css" rel="stylesheet" type="text/css">
-	<link href="{{ site.baseurl }}/assets/themes/twitter/css/style.css" rel="stylesheet" type="text/css" media="all">
+	<link href="{{ site.baseurl }}assets/themes/twitter/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="{{ site.baseurl }}assets/themes/twitter/css/feather.css" rel="stylesheet" type="text/css">
+	<link href="{{ site.baseurl }}assets/themes/twitter/css/style.css" rel="stylesheet" type="text/css" media="all">
 </head>
 
 <body>
-	<div class="navbar">
-		<div class="navbar-inner">
-			<div class="container-narrow">
-				<a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+	<!-- header start -->
+	<div class="header-wrap">
+		<header>
+			<div class="container d-flex justify-content-between align-items-center">
+				<!-- logo start -->
+				<div class="logo">
+					<a class="brand" href="{{ site.baseurl }}">Feather</a>
+				</div>
+				<!-- logo end -->
+				<!-- header right start -->
+				<div class="header-right d-flex">
+					<div class="menu d-flex">
+						<ul class="d-flex align-items-center">
+							<li><a href="javascript:;" class="goto-section" data-id="how-to-use">Get Started</a></li>
+							<li><a href="javascript:;" class="goto-section" data-id="icons">Icons</a></li>
+						</ul>
+					</div>
+					<ul class="d-flex align-items-center">
+						<li class="download"><a href="#"><i class="feather-download"></i> Download</a></li>
+						<li class="github"><a href="{{ site.baseurl }}"><i class="feather-github"></i></a></li>
+					</ul>
+				</div>
+				<!-- header right end -->
+			</div>
+		</header>
+	</div>
+	<!-- header end -->
+	<!-- banner start -->
+	<div class="banner-wrap d-flex justify-content-center align-items-center" style="background: url('{{ site.baseurl }}assets/themes/twitter/images/banner-img.jpg');">
+		<div class="banner-text max-width-700 margin-auto text-center">
+			<h1>260+ Simply beautiful open source icons For Web & Desktop</h1>
+			<div>
+				<a href="javascript:;" class="btn btn-primary goto-section" data-id="how-to-use">How To Use</a>
+				<a href="javascript:;" class="btn btn-white goto-section" data-id="icons">View All Icons</a>
 			</div>
 		</div>
 	</div>
-	<div class="hello">
-		Hello
-		<div class="feather-activity"></div>
+	<!-- banner end -->
+	<!-- how to use start -->
+	<div class="how-to-use" id="how-to-use">
+		<div class="container max-width-700">
+			<div class="title">
+				<h2>How To Use</h2>
+			</div>
+			<p>Feather Icons growing icon collection allows designers and developers targeting various platforms to download icons in the format, color and size they need for any project.</p>
+			<h3>Usage</h3>
+			<p>To use Feather Icons in your application, include the following files in <head></p>
+			<pre><code><link href="assets/css/feather.css" rel="stylesheet" type="text/css"></code></pre>
+			<p>To generate an icon, add the following code:<head></p>
+			<pre><code><i class="feather-github"></i></code></pre>
+			<div class="max-width-300 margin-auto padding-top-30">
+				<a href="javascript:;" class="btn btn-primary btn-block"><i class="feather-download"></i> Download Now</a>
+				<a href="javascript:;" class="btn btn-white btn-block"><i class="feather-github"></i> Fork Now</a>
+			</div>
+		</div>
 	</div>
+	<!-- how to use end -->
+	<!-- icon list start -->
+	<div class="icon-wrap" id="icons">
+		<div class="container">
+			<div class="icon-wrap-title">
+				<div class="title">
+					<h2>The Icons</h2>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-6 col-sm-12">
+						<div class="search-box">
+							<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Icons..." title="Type in a name">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="icon-list-wrap">
+				<ul id="myUL">
+					<li>
+						<div class="box open-modal" data-modal=".modal-popup">
+							<div class="icon-name-box">
+								<div class="icon"><i class="feather-activity"></i></div>
+								<div class="icon-name-div">feather-activity</div>
+							</div>
+							<div class="icon-code-box">
+								<div class="icon-code-div">
+									<pre><code></code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-unicode">
+									<label>unicode</label>
+									<pre><code class="unicode">"\e900"</code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-cheatcode">
+									<label>CheatCode</label>
+									<pre><code class="cheatcode">&#xe900;</code></pre>
+									<div class="copy-click"></div>
+								</div>
+							</div>
+						</div>
+					</li>
 
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/themes/twitter/js/jquery.js"></script>
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/themes/twitter/bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="{{ site.baseurl }}/assets/themes/twitter/js/setting.js"></script>
+					<li>
+						<div class="box open-modal" data-modal=".modal-popup">
+							<div class="icon-name-box">
+								<div class="icon"><i class="feather-airplay"></i></div>
+								<div class="icon-name-div">feather-airplay</div>
+							</div>
+							<div class="icon-code-box">
+								<div class="icon-code-div">
+									<pre><code></code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-unicode">
+									<label>unicode</label>
+									<pre><code class="unicode">"\e901"</code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-cheatcode">
+									<label>CheatCode</label>
+									<pre><code class="cheatcode">&#xe901;</code></pre>
+									<div class="copy-click"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="box open-modal" data-modal=".modal-popup">
+							<div class="icon-name-box">
+								<div class="icon"><i class="feather-alert-circle"></i></div>
+								<div class="icon-name-div">feather-alert-circle</div>
+							</div>
+							<div class="icon-code-box">
+								<div class="icon-code-div">
+									<pre><code></code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-unicode">
+									<label>unicode</label>
+									<pre><code class="unicode">"\e902"</code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-cheatcode">
+									<label>CheatCode</label>
+									<pre><code class="cheatcode">&#xe902;</code></pre>
+									<div class="copy-click"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="box open-modal" data-modal=".modal-popup">
+							<div class="icon-name-box">
+								<div class="icon"><i class="feather-alert-octagon"></i></div>
+								<div class="icon-name-div">feather-alert-octagon</div>
+							</div>
+							<div class="icon-code-box">
+								<div class="icon-code-div">
+									<pre><code></code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-unicode">
+									<label>unicode</label>
+									<pre><code class="unicode">"\e903"</code></pre>
+									<div class="copy-click"></div>
+								</div>
+								<div class="icon-cheatcode">
+									<label>CheatCode</label>
+									<pre><code class="cheatcode">&#xe903;</code></pre>
+									<div class="copy-click"></div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- icon list end -->
+	<!-- related product start -->
+	<div class="related-product">
+		<div class="container">
+			<ul class="row">
+				<li class="col-md-6 col-sm-12">
+					<a href="https://github.com/dropways/deskapp">
+						<div class="related-box">
+							<img src="{{ site.baseurl }}assets/themes/twitter/images/deskapp.png" alt="deskapp">
+						</div>
+						<h3>DeskApp Bootstrap 4 admin template</h3>
+						<p>DeskApp Admin is a free to use Bootstrap 4 admin template. This template uses the default Bootstrap 4 styles along with a variety of powerful jQuery plugins and tools to create a powerful framework for creating admin panels or back-end dashboards.</p>
+					</a>
+				</li>
+				<li class="col-md-6 col-sm-12">
+					<a href="https://github.com/dropways/you-login">
+						<div class="related-box">
+							<img src="{{ site.baseurl }}assets/themes/twitter/images/you-login.png" alt="deskapp">
+						</div>
+						<h3>Login Screen Template</h3>
+						<p>You Login template is a collection of 7 different types of Login, Register and Forgot password Templates. Which are ready to use Bootstrap 4 Responsive Login templates.</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- related product end -->
+
+
+	<!-- modal start -->
+	<div class='modal-wrap modal-popup popup-wrap'>
+		<div class='content'>
+		</div>
+		<a class='btn close-modal' data-modal=".modal-popup" href="#"><i class="feather icon-x-circle"></i> Close</a>
+	</div>
+	<!-- modal end -->
+
+	<script type="text/javascript" src="{{ site.baseurl }}assets/themes/twitter/js/jquery.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}assets/themes/twitter/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}assets/themes/twitter/js/clipboard.min.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}assets/themes/twitter/js/setting.js"></script>
 </body>
 </html>
