@@ -19,8 +19,10 @@ $(".open-modal").on('click', function(e){
 	e.stopImmediatePropagation;
 	var $this = $(this),
 	modal = $($this).data("modal");
+	$('body').addClass("modal-open");
 	$(modal).parents(".overlay").addClass("open");
 	setTimeout( function(){
+		$('body').addClass("modal-open");
 		$(modal).addClass("open");
 	}, 350);
 	$(document).on('click', function(e){
@@ -28,8 +30,10 @@ $(".open-modal").on('click', function(e){
 		if ($(target).hasClass("overlay")){
 			$(target).find(".modal-wrap").each( function(){
 				$(this).removeClass("open");
+				$('body').removeClass("modal-open");
 			});
 			setTimeout( function(){
+				$('body').removeClass("modal-open");
 				$(target).removeClass("open");
 			}, 350);
 		}
@@ -70,7 +74,7 @@ $(".close-modal").on('click', function(e){
 
 	var $this = $(this),
 	modal = $($this).data("modal");
-
+	$('body').removeClass("modal-open");
 	$(modal).removeClass("open");
 	setTimeout( function(){
 		$(modal).parents(".overlay").removeClass("open");
