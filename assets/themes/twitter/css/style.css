@@ -644,11 +644,11 @@ p {
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	-webkit-transform: translate(0px, -20px);
+	/*-webkit-transform: translate(0px, -20px);
 	-moz-transform: translate(0px, -20px);
 	-o-transform: translate(0px, -20px);
 	-ms-transform: translate(0px, -20px);
-	transform: translate(0px, -20px);
+	transform: translate(0px, -20px);*/
 }
 .overlay .modal-wrap.open .close-modal{
 	-webkit-transform: translate(0px, 0);
@@ -687,7 +687,7 @@ p {
 	padding: 0 0 0px 0px;
 	opacity: 0;
 	pointer-events: none;
-	transition: 0.35s ease-in-out;
+	transition: all 300ms ease-in-out;
 	max-height: 100vh;
 	overflow-y: auto;
 	-webkit-border-radius: 8px;
@@ -704,7 +704,7 @@ p {
 	opacity: 1;
 }
 .overlay .modal-wrap .content {
-	transform: translate(0, -20px);
+	/*transform: translate(0, -20px);*/
 	opacity: 0;
 	transition: 0.35s ease-in-out;
 }
