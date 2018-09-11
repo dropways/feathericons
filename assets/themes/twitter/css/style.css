@@ -767,7 +767,6 @@ p {
 
 .related-product{
 	padding: 80px 0;
-	display: none;
 }
 .related-product ul li{
 	margin-bottom: 30px;
@@ -786,4 +785,18 @@ p {
 .related-box{
 	max-width: 400px;
 	margin: 0 auto;
+}
+
+@media (max-width: 991px){
+	.icon-list-wrap ul li{width: 50%;}
+}
+@media (max-width: 599px){
+	.icon-list-wrap ul li{width: 100%;}
+	/*.header-wrap .container{display: block !important;}*/
+	.header-wrap header{padding: 10px 0;}
+	.header-right ul li.download a{height: 51px; font-size: 0; padding-left: 35px; background: transparent;}
+	.header-right ul li.download a i{left: 16px; top: 9px;}
+	.menu{display: none !important;}
+	.banner-wrap{height: 440px;}
+	.banner-text h1{font-size: 32px; line-height: 40px;}
 }
